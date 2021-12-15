@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Login Form</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <section class="main">
+            <div class="myForm">
+                <h2 id="signupHeading" onclick="showSignupForm()">Sign Up</h2>
+                <form>
+                    <input type="text" placeholder="Name">
+                    <input type="text" placeholder="Email">
+                    <input type="text" placeholder="Password">
+                    <input type="button" value="sign up">
+                </form>
+                <h3 onclick="showLoginForm()">Login</h3>
+                <div class="loginForm" id="loginForm">
+                    <h2>Login Form</h2>
+                    <form>
+                        <input type="text" placeholder="Email">
+                        <input type="text" placeholder="Password">
+                        <input type="button" value="Login"> 
+                    </form>
+                </div>
+            </div>
+        </section>
+
+
+        <script>
+            function showLoginForm()
+            {
+                document.getElementById("loginForm").classList.add("showForm");
+                document.getElementById("signupHeading").style.fontSize = "20px"
+            }
+            function showSignupForm()
+            {
+                document.getElementById("loginForm").classList.remove("showForm");
+                document.getElementById("signupHeading").style.fontSize = "2em"
+            }
+        </script>
+</body>
+</html>
